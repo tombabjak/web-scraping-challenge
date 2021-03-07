@@ -13,34 +13,80 @@
     <div class="container-fluid">
         <div class="jumbotron text-center">
         <h1>Mission to MARS</h1>
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get The Facts!</a></p>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">"Scrape" The Facts!</a></p>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <h2>Latest MARS News:</h2><hr>
-                <h4> {{ mars.news_title}} </h3>
-                </p> {{ mars.news_p }} </p>
+            <div class="col-lg-12">
+                <h2>Latest MARS News:</h2>
+                <h4> {{ mars.news_title}} </h4>
+                <p> {{ mars.news_p }} </p><hr>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-lg-8">
                 <h2>Featured MARS Image:</h2>
-                <img src="{{ mars.featured_image_url }}" alt="Featured Image">  
+                <img src="{{ mars.featured_image_url }}" alt="Featured Image" class="img-fluid">  
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <h2>The Truth About MARS:</h2>
                 <div>
-                    {{ mars.df_html }}
+                    <table border="2" class="dataframe">
+                        <thead>
+                          <tr style="text-align: center;">
+                            <th>Description</th>
+                            <th>Mars</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>Equatorial Diameter:</th>
+                            <td>6,792 km</td>
+                          </tr>
+                          <tr>
+                            <th>Polar Diameter:</th>
+                            <td>6,752 km</td>
+                          </tr>
+                          <tr>
+                            <th>Mass:</th>
+                            <td>6.39 × 10^23 kg (0.11 Earths)</td>
+                          </tr>
+                          <tr>
+                            <th>Moons:</th>
+                            <td>2 (Phobos &amp; Deimos)</td>
+                          </tr>
+                          <tr>
+                            <th>Orbit Distance:</th>
+                            <td>227,943,824 km (1.38 AU)</td>
+                          </tr>
+                          <tr>
+                            <th>Orbit Period:</th>
+                            <td>687 days (1.9 years)</td>
+                          </tr>
+                          <tr>
+                            <th>Surface Temperature:</th>
+                            <td>-87 to -5 °C</td>
+                          </tr>
+                          <tr>
+                            <th>First Record:</th>
+                            <td>2nd millennium BC</td>
+                          </tr>
+                          <tr>
+                            <th>Recorded By:</th>
+                            <td>Egyptian astronomers</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h2>MARS Hemispheres:</h2><hr>
+            <div class="col-lg-12 text-center">
+                <hr><h2>MARS Hemispheres:</h2><hr>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div id="demo" class="carousel slide col-8" data-ride="carousel">
+            <div id="demo" class="carousel slide col-lg-6" data-ride="carousel">
 
                 <!-- Indicators -->
                 <ul class="carousel-indicators">
@@ -85,7 +131,7 @@
                 <a class="carousel-control-next" href="#demo" data-slide="next">
                   <span class="carousel-control-next-icon"></span>
                 </a>
-                
+    
             </div>
         </div>
     </div>
